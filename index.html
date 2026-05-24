@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Karthi | Portfolio</title>
+  <meta name="description" content="Personal Portfolio of Abhishek Karthi - Web Developer & Cloud Computing Enthusiast">
+  <meta name="theme-color" content="#f8fafc">
+  <meta property="og:title" content="Abhishek Karthi | Portfolio">
+  <meta property="og:description"
+    content="Web Developer & Cloud Computing Enthusiast — projects, skills, and achievements">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="mypic.png">
+  <meta property="og:url" content="https://abhishekkarthi.vercel.app/">
+
+  <!-- Fonts (Cormorant Garamond for headings, Quicksand for body text, JetBrains Mono for monospaced elements) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Premium Floating Top Header Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-panel">
+    <div class="container-fluid px-md-4">
+      <a class="nav-brand" href="#home">Abhishek - Portfolio</a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <button class="toggle-theme" id="voiceToggle" aria-label="Voice control" title="Voice control">
+          <i class="bi bi-mic-fill"></i>
+        </button>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+        <div class="navbar-nav nav-links gap-lg-1 gap-xl-3">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#portfolio">Projects</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#certifications">Certifications</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Layout Main Content Scrollable Area -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <header id="home">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <div class="hero-content">
+              <h3 class="reveal">Hello, It's Me</h3>
+              <h1 class="reveal">Abhishek Karthi</h1>
+              <p class="reveal">I navigate the intersection of <strong>web development technologies</strong> and
+                <strong>cloud computing methodologies</strong>, building scalable, modern, and highly secure cloud
+                architectures while deploying applications globally.
+              </p>
+
+              <!-- Stats highlights grid inside Hero -->
+              <div class="hero-stats-grid reveal mt-5">
+                <div class="stat-card">
+                  <span class="stat-value">5+</span>
+                  <span class="stat-label">Web Projects</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-value">NPTEL</span>
+                  <span class="stat-label">OS Certified</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-value">NSS</span>
+                  <span class="stat-label">Volunteer</span>
+                </div>
+              </div>
+
+              <div class="hero-btns mt-5 reveal">
+                <a href="#contact" class="btn-primary">Hire Me <i class="bi bi-envelope"></i></a>
+                <a href="#portfolio" class="btn-secondary-custom ms-2">View Projects <i
+                    class="bi bi-arrow-down"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-image reveal">
+              <div class="image-border">
+                <img src="mypic.png" alt="Abhishek Profile" id="profilePic">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Section: Reordered to be immediately below Hero -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-card">
+          <div class="section-head">
+            <div class="icon"><i class="bi bi-folder-check"></i></div>
+            <h2>Latest <span>Projects</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="portfolio-controls mb-5 px-3">
+            <div class="filters d-flex flex-wrap gap-2 justify-content-center">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="cloud">Cloud</button>
+              <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+          </div>
+
+          <div class="row justify-content-center g-4" id="projects-grid">
+            <div class="col-md-6 col-lg-5 project-item" data-category="web">
+              <div class="project-card" onclick="showProjectDetails('church')">
+                <div class="project-head">
+                  <div class="folder-icon"><i class="bi bi-church"></i></div>
+                  <div class="view-details-indicator">
+                    Details <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+                <div class="project-img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=600&q=80"
+                    alt="Gateway Church Website" class="project-img">
+                </div>
+                <h3>Gateway Church Website</h3>
+                <p>A modern, highly responsive website built for Gateway Church to showcase schedules, digital
+                  ministries, and online donation channels.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-card">
+          <div class="section-head">
+            <div class="icon"><i class="bi bi-person-fill"></i></div>
+            <h2>About <span>Me</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="row gy-5">
+            <div class="col-lg-6">
+              <div class="about-text-panel">
+                <h3>Computer Science Student, Web Developer & Cloud Enthusiast</h3>
+                <p class="mt-3">I focus on developing highly optimized front-end and back-end web platforms and
+                  leveraging
+                  <strong>cloud computing services</strong> to deploy scalable microservices. I thrive on translating
+                  code
+                  into seamless user interfaces and secure backend pipelines.
+                </p>
+                <a href="#contact" class="btn-primary mt-4">Get In Touch <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-highlights-panel">
+                <div class="highlight-item-card">
+                  <div class="highlight-icon"><i class="bi bi-patch-check-fill"></i></div>
+                  <div class="highlight-details">
+                    <h4>Cloud Practitioner</h4>
+                    <p>Enthusiastic about cloud deployment, microservice architectures, and modern CI/CD automation
+                      pipelines.</p>
+                  </div>
+                </div>
+                <div class="highlight-item-card">
+                  <div class="highlight-icon"><i class="bi bi-heart-fill"></i></div>
+                  <div class="highlight-details">
+                    <h4>NSS Volunteer</h4>
+                    <p>Active National Service Scheme volunteer, dedicated to community building, organizing service
+                      events, and leadership development.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-card">
+          <div class="section-head">
+            <div class="icon"><i class="bi bi-award-fill"></i></div>
+            <h2>My <span>Certifications</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+              <div class="credential-item-card text-center p-4">
+                <div class="credential-badge-icon"><i class="bi bi-shield-check"></i></div>
+                <h4 class="mt-3">NPTEL Certification</h4>
+                <p class="credential-subtitle">National Programme on Technology Enhanced Learning</p>
+                <div class="credential-tag my-3">Operating System Fundamentals</div>
+                <p class="credential-desc">Demonstrated proficiency in core Operating System concepts, memory
+                  management, process synchronization, and file system design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-card">
+          <div class="section-head">
+            <div class="icon"><i class="bi bi-send"></i></div>
+            <h2>Contact <span>Me!</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="row gy-5">
+            <div class="col-lg-5">
+              <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p class="mb-4">I'm always open to discussing new projects, cloud strategies, or creative development
+                  opportunities. Drop me a line!</p>
+
+                <div class="contact-method-card mb-3">
+                  <div class="method-icon"><i class="bi bi-envelope-at-fill"></i></div>
+                  <div class="method-details">
+                    <span class="method-label">Email Me</span>
+                    <span class="method-val">abhishekkarthi7@gmail.com</span>
+                  </div>
+                </div>
+
+                <div class="contact-method-card mb-4">
+                  <div class="method-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="method-details">
+                    <span class="method-label">Location</span>
+                    <span class="method-val">Rajahmundry, Andhra Pradesh</span>
+                  </div>
+                </div>
+
+                <div class="availability-status mt-4">
+                  <span class="status-indicator"></span> Available for Web & Cloud Roles
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form id="contactForm" class="contact-form glass-panel p-4 p-md-5 rounded-5">
+                <div class="mb-4">
+                  <label for="name" class="visually-hidden">Name</label>
+                  <input type="text" id="name" class="form-control form-input" placeholder="Name" required>
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="visually-hidden">Email</label>
+                  <input type="email" id="email" class="form-control form-input" placeholder="Email" required>
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="visually-hidden">Message</label>
+                  <textarea id="message" class="form-control form-input" rows="5" placeholder="Message"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-100 justify-content-center">
+                  Send Message <i class="bi bi-send-fill ms-2"></i>
+                </button>
+                <div id="formStatus" class="mt-3 text-center fw-medium"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="app-footer">
+      <p>© <span id="year">2026</span> Abhishek Karthi. Built with passion & code. <span
+          style="margin: 0 5px; opacity: 0.3;">|</span> Visitors: <span id="visitor-count">...</span></p>
+      <a href="#home" aria-label="Back to top" title="Back to top"
+        style="display: inline-block; margin-top: 15px; color: var(--color-primary); font-size: 1.5rem;"><i
+          class='bx bx-up-arrow-alt'></i></a>
+    </footer>
+
+  </main>
+
+  <!-- Project Details Modal (State-of-the-art Custom Modal) -->
+  <div id="projectModal" class="project-detail-modal" aria-hidden="true" style="display: none;">
+    <div class="modal-backdrop-custom" onclick="closeProjectModal()"></div>
+    <div class="project-modal-wrapper glass-panel">
+      <button class="close-modal-btn" onclick="closeProjectModal()">&times;</button>
+
+      <div class="modal-grid">
+        <div class="modal-image-container">
+          <img id="modal-project-img" src="" alt="Project Image">
+        </div>
+        <div class="modal-details-container">
+          <span id="modal-project-category" class="modal-category-badge">Web</span>
+          <h2 id="modal-project-title">Project Title</h2>
+          <p id="modal-project-desc" class="modal-project-description">Detailed description goes here...</p>
+
+          <div class="modal-prompt-text mt-3 mb-3">
+            <span
+              style="font-weight: 600; color: var(--text-headings); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+              <i class="bi bi-compass"></i> Ready to explore this project?
+            </span>
+          </div>
+
+          <div class="modal-actions">
+            <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Live View <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+            <a id="modal-project-github" href="#" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary-custom">
+              Source Code <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div id="cmdkOverlay" class="cmdk-overlay" aria-hidden="true" style="display: none;">
+    <div class="cmdk-modal glass-panel">
+      <div class="cmdk-header">
+        <i class="bi bi-search cmdk-search-icon"></i>
+        <input type="text" id="cmdkInput" placeholder="Type a command or search..." autocomplete="off">
+        <span class="cmdk-badge">ESC</span>
+      </div>
+      <div class="cmdk-body">
+        <div id="cmdkList" class="cmdk-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
