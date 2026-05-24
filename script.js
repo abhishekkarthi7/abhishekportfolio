@@ -128,6 +128,15 @@ const projectsData = {
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Vercel'],
     liveLink: 'https://gatewaychurch.vercel.app/',
     githubLink: 'https://github.com/abhishekkarthi7'
+  },
+  portfolio_project: {
+    title: 'Abhishek Portfolio',
+    category: 'Web',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+    desc: 'A state-of-the-art developer portfolio site built using HTML, CSS, and vanilla JavaScript. Features fully responsive sections, interactive elements, custom ambient background transitions, and a clean user feedback gateway.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Vercel'],
+    liveLink: 'https://abhishekkarthiportfolio.vercel.app/',
+    githubLink: 'https://github.com/abhishekkarthi7'
   }
 };
 
