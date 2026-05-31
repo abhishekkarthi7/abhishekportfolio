@@ -313,12 +313,33 @@
     </section>
 
     <!-- Footer Area -->
-    <footer class="app-footer">
-      <p>© <span id="year">2026</span> Abhishek Karthi. Built with passion & code. <span
-          style="margin: 0 5px; opacity: 0.3;">|</span> Visitors: <span id="visitor-count">...</span></p>
-      <a href="#home" aria-label="Back to top" title="Back to top"
-        style="display: inline-block; margin-top: 15px; color: var(--color-primary); font-size: 1.5rem;"><i
-          class='bx bx-up-arrow-alt'></i></a>
+    <footer class="app-footer-container container">
+      <div class="footer-card glass-panel text-center p-4 p-md-5 rounded-5 reveal">
+        <div class="footer-content">
+          <div class="footer-logo mb-3">
+            <span class="nav-brand">Abhishek</span>
+          </div>
+          <p class="footer-made-by mb-4">
+            Made with <i class="bi bi-heart-fill pulse-heart" style="color: var(--color-primary);"></i> by 
+            <strong style="color: var(--text-headings); font-weight: 700;">Abhishek Karthi</strong>
+          </p>
+          
+          <!-- Visitor Counter Card inside the Footer Card -->
+          <div class="visitor-counter-wrapper d-inline-flex align-items-center gap-3 px-4 py-2 rounded-pill mb-4">
+            <div class="visitor-pulse-dot"></div>
+            <span class="visitor-label"><i class="bi bi-people-fill me-1"></i> Visitors:</span>
+            <span id="visitor-count" class="visitor-value">...</span>
+          </div>
+          
+          <div class="footer-bottom-info pt-4 mt-2">
+            <p class="mb-0">© <span id="year">2026</span> All Rights Reserved.</p>
+          </div>
+        </div>
+        
+        <a href="#home" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+          <i class="bi bi-arrow-up-short"></i>
+        </a>
+      </div>
     </footer>
 
   </main>
