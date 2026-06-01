@@ -772,7 +772,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initTilt();
   }
   
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
   // Typed.js removed because role section is static now
   

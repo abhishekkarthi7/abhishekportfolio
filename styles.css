@@ -1041,53 +1041,57 @@ section.show {
   color: #ffffff;
 }
 
-/* ================= FOOTER & MEDIA SHIFTS ================= */
-/* ================= NEW PREMIUM FOOTER CARD ================= */
+/* ================= NEW PREMIUM COMPACT FOOTER CARD ================= */
 .app-footer-container {
-  margin-top: 80px;
-  padding-bottom: 40px;
+  margin-top: 60px;
+  padding-bottom: 30px;
 }
 
-.footer-card {
-  position: relative;
+.footer-card-compact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 28px;
+  border-radius: 50px;
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow: var(--glass-shadow);
   transition: var(--transition-spring);
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-.footer-card:hover {
-  transform: translateY(-5px);
+.footer-card-compact:hover {
+  transform: translateY(-3px);
   border-color: var(--color-primary);
   box-shadow: 
-    0 30px 60px -20px rgba(15, 23, 42, 0.1),
-    0 0 25px rgba(219, 39, 119, 0.05);
+    0 15px 30px -10px rgba(15, 23, 42, 0.08),
+    0 0 20px rgba(219, 39, 119, 0.05);
 }
 
 .footer-made-by {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
+  margin: 0;
 }
 
-/* Visitor Counter Capsule */
+.footer-divider {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(15, 23, 42, 0.08);
+}
+
 .visitor-counter-wrapper {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(15, 23, 42, 0.04);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
-  transition: var(--transition-smooth);
-}
-
-.footer-card:hover .visitor-counter-wrapper {
-  border-color: rgba(2, 132, 199, 0.15);
-  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .visitor-pulse-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #10b981; /* Emerald green */
   border-radius: 50%;
   position: relative;
@@ -1112,46 +1116,16 @@ section.show {
 
 .visitor-label {
   font-family: var(--font-main);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-muted);
 }
 
 .visitor-value {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-headings);
-}
-
-.footer-bottom-info {
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* Back to top styled button */
-.back-to-top-btn {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  background: var(--text-headings);
-  color: #ffffff !important;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-  transition: var(--transition-spring);
-}
-
-.back-to-top-btn:hover {
-  background: var(--color-primary);
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.3);
 }
 
 /* Pulse Heart Animation */
@@ -1166,13 +1140,6 @@ section.show {
   28% { transform: scale(1); }
   42% { transform: scale(1.12); }
   70% { transform: scale(1); }
-}
-
-@media (max-width: 575.98px) {
-  .back-to-top-btn {
-    position: static;
-    margin: 20px auto 0;
-  }
 }
 
 @media (max-width: 991.98px) {
