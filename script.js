@@ -120,6 +120,15 @@ filterBtns.forEach(btn => {
 
 // Project Modals Data & Operations
 const projectsData = {
+  jesus_songs: {
+    title: 'Jesus Songs Telugu',
+    category: 'Web',
+    image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80',
+    desc: 'A heavenly, highly interactive Telugu and English Christian worship lyrics directory. Features a particle canvas engine, real-time search autocomplete, responsive song type categories, custom lyric options (copy, share, print), and personalized spiritual reflections.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Canvas API', 'Vercel'],
+    liveLink: 'https://jesussongs-telugu.vercel.app/',
+    githubLink: 'https://github.com/abhishekkarthi7/jesussongs-telugu'
+  },
   church: {
     title: 'Gateway Church Website',
     category: 'Web',
@@ -157,6 +166,7 @@ function showProjectDetails(id) {
   // Handle fallback source for missing images
   modalProjectImg.onerror = () => {
     if (id === 'church') modalProjectImg.src = 'https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=600&q=80';
+    else if (id === 'jesus_songs') modalProjectImg.src = 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80';
     else modalProjectImg.src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80';
   };
 
@@ -309,7 +319,7 @@ function initVoiceControl() {
       { 
         selector: '#portfolio', 
         action: () => { smoothScrollTo('#portfolio'); highlightSection('#portfolio'); },
-        text: 'In the Projects section, you can explore Abhishek\'s web project, the Gateway Church website, built with modern responsive designs.'
+        text: 'In the Projects section, you can explore Abhishek\'s web projects, including Jesus Songs Telugu, the Gateway Church website, and his developer portfolio.'
       },
       { 
         selector: '#contact', 
@@ -596,7 +606,7 @@ function explainPortfolioOverview() {
 function explainProjects() {
   smoothScrollTo('#portfolio');
   highlightSection('#portfolio');
-  const text = `Abhishek designed and developed the Gateway Church website, featuring modern responsive web development. You can explore the live demo or source code right here.`;
+  const text = `Abhishek designed and developed multiple web platforms including Jesus Songs Telugu, the Gateway Church website, and his personal portfolio. You can explore the live demo or source code right here.`;
   speak(text);
 }
 
